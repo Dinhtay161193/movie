@@ -1,0 +1,17 @@
+.infomation {
+  &__content {
+    margin: 0 15%;
+    display: flex;
+    text-align: center;
+    &__right {
+      width: 20%;
+      &--img {
+        margin: 0 auto;
+        img {
+          width: 50%;
+          margin: 0 25%;
+        }
+      }
+    }
+  }
+}
