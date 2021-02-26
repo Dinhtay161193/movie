@@ -8,6 +8,7 @@ import { fetchDetail } from "../../Redux/Course/index";
 import Header from "../../Layouts/Header";
 import Footer from "../../Layouts/Footer";
 import HeaderMobile from "../../Layouts/HeaderMobile";
+import { THEM_GIO_HANG } from "../../Redux/Constants";
 
 class Details extends Component {
   renderDetails = () => {
@@ -125,14 +126,22 @@ class Details extends Component {
                 <div className="banner__content__up--sign">
                   <p>Học phí:5.000.000 VND</p>
                   <p>Thời gian:18 Tuần</p>
-                  <button className="btn btn-outline-warning">
-                    Add to card <i className="text-danger fa fa-heart" />
+                  <button
+                    className="btn btn-outline-warning"
+                    onClick={() =>
+                      this.props.dispatch({
+                        type: THEM_GIO_HANG,
+                        payload: this.props.detailCourse,
+                      })
+                    }
+                  >
+                    Thêm Giỏ Hàng <i className="text-danger fa fa-heart" />
                   </button>
                   <button
                     style={{ marginTop: "5px" }}
                     className="btn btn-outline-success"
                   >
-                    Buy now
+                    Mua Ngay
                   </button>
                 </div>
               </div>

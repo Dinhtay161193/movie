@@ -64,7 +64,6 @@ export default function SearchCourses() {
 
   function handleSearch(event) {
     const { value, name } = event.target;
-
     setSearch({
       ...search,
       [name]: value,
